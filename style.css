@@ -38,7 +38,6 @@ img {
   width: 100%;
 }
 
-
 /*
 
 NAV 
@@ -131,7 +130,7 @@ header {
   border: 1.5px solid #cbd5e1;
   border-right: 20px solid #badcee;
   border-radius: 0 16px 16px 0;
-  padding:40px;
+  padding: 40px;
   box-shadow: 4px 4px 10px rgb(0 0 0 / 0.1);
   width: 100%;
   max-width: 1200px;
@@ -139,7 +138,8 @@ header {
   margin-bottom: 30px;
   display: flex;
   align-items: center;
-  justify-content: center;background-color: #fefefe;
+  justify-content: center;
+  background-color: #fefefe;
 }
 
 .hero__img--wrapper {
@@ -157,7 +157,7 @@ header {
   color: #64748b;
 }
 
-button  {
+button {
   background-color: #c231c2;
   width: 95%;
   color: white;
@@ -179,8 +179,11 @@ SOCIAL
 
 */
 
-#about, #social {
-  padding: 24px;
+#about,
+#social,
+#contact,
+footer {
+  padding: 24px 0;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -204,7 +207,8 @@ SOCIAL
   align-items: center;
 }
 
-.about__row, .social__row {
+.about__row,
+.social__row {
   justify-content: start;
 }
 
@@ -240,7 +244,6 @@ SOCIAL
   border-right: 20px solid #ef4810;
 }
 
-
 /* 
 
 CONTACT
@@ -263,7 +266,8 @@ form {
   gap: 12px;
 }
 
-input, textarea {
+input,
+textarea {
   margin-bottom: 24px;
   font-size: 20px;
   padding: 6px 12px;
@@ -280,6 +284,7 @@ FOOTER
 footer {
   background-color: #badcee;
   display: flex;
+  flex-direction: column;
   align-items: center;
   border-top: 1.5px dashed #cbd5e1;
   padding: 12px 20px;
@@ -292,4 +297,65 @@ footer {
 
 .footer__links {
   margin-bottom: 16px;
+}
+
+.footer__link {
+  padding: 0 16px;
+}
+
+/*
+ 
+ RESPONSIVENESS
+ 
+ */
+
+/* 
+ 
+ SMALL SCREENS
+ 
+ */
+
+@media (max-width: 1024px) {
+  .section__description--para {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  a {
+    font-size: 16px;
+  }
+  .course {
+    gap: 4px;
+  }
+  .course__title {
+    margin-left: 0;
+    font-size: 40px;
+  }
+  .hero {
+    flex-direction: column;
+  }
+  .hero__img--wrapper {
+    max-width: 500px;
+  }
+  .hero__description {
+    margin-left: 0;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .section__description {
+    flex-direction: column;
+  }
+
+  .section__description--wrapper {
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    width: 400px;
+  }
 }
